@@ -7,6 +7,9 @@ import Home from './views/public/Home'
 import Login from './views/public/Login'
 import Register from './views/public/Register'
 import '../src/App.css'
+import Favorites from './views/private/Favorites'
+import ShoppingCart from './views/private/ShoppingCart'
+import CreatePost from './views/private/CreatePost'
 
 function App() {
   return (
@@ -15,9 +18,11 @@ function App() {
         <ContextAutentificacion>
           <Navbar></Navbar>
           <Routes>
-            <Route exact path="/" element={<Home />}>Home</Route>
-            <Route exact path="/singup" element={<Register />}>Registrarse</Route>
-            <Route exact path="/login" element={<Login />}>Login</Route>
+          <Route path="/login" element={<Login />}>Login</Route>
+          <Route path="/" element={<Home />}>Home</Route>
+          <Route path="/favoritos" element={<Favorites />}>Favorites</Route>
+          <Route path="/carro" element={<ShoppingCart />}>Carro</Route>
+          <Route path="/vender" element={<CreatePost />}>Vender</Route>
           </Routes>
           <Footer></Footer>
         </ContextAutentificacion>
