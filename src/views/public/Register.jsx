@@ -35,7 +35,7 @@ const Register = () => {
         <div className="container">
             <div className="d-flex justify-content-center">
                 <div className="card col-sm-12 col-md-12 col-lg-8 d-flex align-items-center mt-5 border-0 p-4">
-                    <h1 className="mt-4">Iniciar Sesión</h1>
+                    <h1 className="mt-4">Registrate</h1>
                     <div className="row col-xs-10 col-sm-10 col-md-10 col-lg-8 justify-content-center"  style={{width: '100%'}}>
                         <div>
                             <label className="mt-3">Nombre:</label>

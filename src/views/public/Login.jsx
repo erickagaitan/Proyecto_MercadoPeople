@@ -35,11 +35,7 @@ const Login = () => {
             <div className="d-flex justify-content-center">
                 <div className="card col-lg-5 d-flex align-items-center mt-5 border-0">
                     <h1>Iniciar Sesión</h1>
-<<<<<<< HEAD
                     <div className="row col-md-8 col-lg-6 col-8 justify-content-center"  style={{width: '18rem'}}>
-=======
-                    <div className="row col-md-8 col-lg-6 col-8 justify-content-center">
->>>>>>> 8878c8020c8268813baae284c7e6565bf9acfeaa
                         <div>
                             <label className="mt-3">Usuario:</label>
                             <input className="form-control form-control-lg" type="text" onChange= {(e) => setEmail(e.target.value)} />
