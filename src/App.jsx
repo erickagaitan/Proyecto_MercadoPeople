@@ -1,25 +1,27 @@
-
+import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import { useState, useEffect } from 'react'
-// import Context from './context/context'
+import ContextAutentificacion from './context/ContextAutentificacion'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import Home from './views/public/Home'
 import Login from './views/public/Login'
+import Register from './views/public/Register'
+import '../src/App.css'
 
 function App() {
   return (
     <div className="App">
-
       <BrowserRouter>
-        <Navbar></Navbar>
-        <Routes>
-          <Route path="/login" element={<Login />}>Login</Route>
-          <Route path="/" element={<Home />}>Home</Route>
-        </Routes>
-        <Footer></Footer>
+        <ContextAutentificacion>
+          <Navbar></Navbar>
+          <Routes>
+            <Route exact path="/" element={<Home />}>Home</Route>
+            <Route exact path="/singup" element={<Register />}>Registrarse</Route>
+            <Route exact path="/login" element={<Login />}>Login</Route>
+          </Routes>
+          <Footer></Footer>
+        </ContextAutentificacion>
       </BrowserRouter>
-
     </div>
   )
 }
