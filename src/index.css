@@ -16,3 +16,9 @@ body{
   background-color: #75cc3b !important;
   color: #fff;
 }
+.img-favorites{
+  display: flex;
+  align-items: center;
+  height: 10rem;
+  width: 300px;
+}
