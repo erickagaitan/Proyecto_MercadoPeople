@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./register.css"
 
 const defaultValue = () => {
     return {
@@ -78,7 +79,7 @@ const Register = () => {
                             <input className="form-control form-control-lg" type="password" />
                         </div>
                         <button 
-                            className="btn btn-success mt-3 mb-5 w-50 mt-5"
+                            className="btnregistrar btn btn-success mt-3 mb-5 w-50 mt-5"
                             onClick={registrar}
                         >
                             Registrarse

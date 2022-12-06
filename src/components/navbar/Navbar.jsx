@@ -1,16 +1,22 @@
 import React, { useContext } from 'react'
-import { AutentiContext } from '../context/ContextAutentificacion'
+import { AutentiContext } from '../../context/ContextAutentificacion'
 import { Link } from "react-router-dom"
+import Logo from '../../assets/img/carrito.png'
+import "./navbar.css"
 
 const Navbar = () => {
 
     const { usuario, cerrarSesion, cargando} = useContext(AutentiContext)
     
     return (
-        <nav className="navbar navbar-expand-lg bg-green">
+        <nav className="navbar navbar-expand-lg bg-dark">
             <div className="container-fluid">
-                <Link className="navbar-brand text-white" to="/"><strong><i className="fa-solid fa-pizza-slice"></i>Mercado People</strong></Link>
-                <ul className="navbar-nav ">
+                <div className='img'>
+                    <img className='img1' src={Logo} alt="logo" /> 
+                    <Link className="navbar-brand text-white" to="/"><strong className="titulo">Mercado People</strong></Link>                  
+                </div>
+                
+                <ul className="navbar-nav">
                     <li className="nav-item">
                         <Link className="nav-link text-white"><strong>Categoria Productos</strong></Link>
                     </li>

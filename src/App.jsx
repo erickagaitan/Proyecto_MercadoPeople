@@ -1,15 +1,15 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ContextAutentificacion from './context/ContextAutentificacion'
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
+import Footer from './components/footer/Footer'
+import Navbar from './components/navbar/Navbar'
 import Home from './views/public/Home'
-import Login from './views/public/Login'
-import Register from './views/public/Register'
-import '../src/App.css'
+import Login from './views/public/login/Login'
+import Register from './views/public/register/Register'
 import Favorites from './views/private/Favorites'
 import ShoppingCart from './views/private/ShoppingCart'
 import CreatePost from './views/private/CreatePost'
+//import '../src/App.css'
 
 function App() {
   return (

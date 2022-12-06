@@ -1,0 +1,10 @@
+.carousel-inner {
+    max-height: 500px;
+    width: 100%;
+}
+
+.imagenbanner{
+    max-height: 500px;
+    min-height: 500px;
+    width: 100%;
+}
