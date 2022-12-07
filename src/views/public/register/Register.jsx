@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { validateEmail } from '../../../utils/validacionCorreo';
 import "./register.css"
 
 const defaultValue = () => {
@@ -13,22 +14,31 @@ const defaultValue = () => {
     };
 };
 
-
 const Register = () => {
 
     const [formData, setFormData] = useState(defaultValue());
+    const [repeatPassword, setRepeatPassword] = useState()
 
     const registrar = () => {
-        try {
+
+        if (!formData.nombre || !formData.apellido || !formData.ubicacion || !formData.email || !formData.telefono || !formData.password) {
+            alert('Todos los campos son requeridos')
+        } else if (!validateEmail(formData.email)) {
+            alert('Debes introducir un correo válido')
+        } else if (formData.password !== repeatPassword) {
+            alert('El campo contraseña y repetir contraseña no coinciden')
+        } else if (formData.password.length < 6) {
+            alert('La contraseña debe tener minimo 6 caracteres')
+        } else {
+            
             const sesion =window.localStorage.getItem('usuario')
             const usuario = JSON.parse(sesion)
+
             if(usuario?.email === formData?.email) {
                 alert('ops existe un usuario registrado con el correo:', formData?.email)
             } else {
                 window.localStorage.setItem('usuario',JSON.stringify(formData))
-            }  
-        } catch (error) {
-            console.log(error)
+            }
         }
     }
 
@@ -76,7 +86,7 @@ const Register = () => {
                                 onChange= { (e) => setFormData({...formData, password: e.target.value})} 
                             />
                             <label className="mt-3">Confirmar contraseña:</label>
-                            <input className="form-control form-control-lg" type="password" />
+                            <input className="form-control form-control-lg" type="password" onChange={(e) => setRepeatPassword( e.target.value)}/>
                         </div>
                         <button 
                             className="btnregistrar btn btn-success mt-3 mb-5 w-50 mt-5"

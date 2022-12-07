@@ -1,7 +1,5 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// Styles
-import '../src/App.css'
 // Context
 import ContextAutentificacion from './context/ContextAutentificacion'
 // Views
@@ -16,6 +14,10 @@ import ShoppingCart from './views/private/ShoppingCart'
 import CreatePost from './views/private/CreatePost'
 import Pay from './views/private/Pay'
 import Footer from './components/footer/Footer'
+import ProtectedRoute from './components/ProtectedRoute'
+import PublicRoute from './components/PublicRoute'
+// Styles
+import '../src/App.css'
 
 function App() {
   return (
@@ -24,15 +26,58 @@ function App() {
         <ContextAutentificacion>
           <Navbar></Navbar>
           <Routes>
-            <Route path="/login" element={<Login />}>Login</Route>
-            <Route path="/singup" element={<Register />}>Login</Route>
             <Route path="/" element={<Home />}>Home</Route>
+            <Route path="/login" element={
+              <PublicRoute>
+                <Login />
+              </PublicRoute>              
+              }>
+                Login
+            </Route>
+
+            <Route path="/singup" element={
+              <PublicRoute>
+                <Register />
+              </PublicRoute>
+              }>
+                Login
+            </Route>
+           
             <Route path="/products" element={<Products />}>Products</Route>
             <Route path="/Detail" element={<DetailProduct />}>Products</Route>
-            <Route path="/pagar" element={<Pay />}>Pay</Route>
-            <Route path="/favoritos" element={<Favorites />}>Favorites</Route>
-            <Route path="/carro" element={<ShoppingCart />}>Carro</Route>
-            <Route path="/vender" element={<CreatePost />}>Vender</Route>
+            
+            <Route path="/pagar" element={
+              <ProtectedRoute>
+                <Pay />
+              </ProtectedRoute>
+            }>
+               Pay
+            </Route>
+
+            <Route path="/favoritos" element={
+              <ProtectedRoute>
+                <Favorites />
+              </ProtectedRoute>
+            }>
+              Favorites
+            </Route>
+
+
+            <Route path="/carro" element={
+              <ProtectedRoute>
+                <ShoppingCart />
+              </ProtectedRoute>
+            }>
+              Carro
+            </Route>
+            
+            <Route path="/vender" element={
+              <ProtectedRoute>
+                <CreatePost />
+              </ProtectedRoute>
+            }>
+              Vender
+            </Route>
           </Routes>
           <Footer></Footer>
         </ContextAutentificacion>
