@@ -25,8 +25,8 @@ const ContextAutentificacion = ({children})=>{
             const sesion = window.localStorage.getItem('usuario')
             const usuario = JSON.parse(sesion)
            if(!usuario){
-            const formData = {email: "invitado@gmail.com", password:123456,activo:false}
-            window.localStorage.setItem('usuario',JSON.stringify(formData))
+            //const formData = {email: "invitado@gmail.com", password:123456,activo:false}
+            //window.localStorage.setItem('usuario',JSON.stringify(formData))
            }
             setUsuario(usuario)
             setCargando(false)
