@@ -1,0 +1,38 @@
+.productcard{
+    height:500px;
+    width:300px;
+    margin: 1rem;
+}
+
+.card2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.card-title{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.card-text{
+    padding-top: 20px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary{
+    background-color:black ;
+    border: none;
+    width: 100px;
+    height: 40px;
+}
+
+.imagen{
+height: 30px;
+}
