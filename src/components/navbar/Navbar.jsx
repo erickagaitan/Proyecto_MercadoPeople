@@ -48,9 +48,6 @@ const Navbar = () => {
 
                         <Link className="nav-link text-white" to="/Detail"><strong>Detalle</strong></Link>
                     </li>
-                    <li className="nav-item">
-                        <Link className="nav-link text-white">Registrate</Link>
-                    </li>
                  
                     <li className="nav-item">
                         <Link className="nav-link text-white" to="/pagar"><i className="fa-solid fa-cart-shopping"> $0</i></Link>
