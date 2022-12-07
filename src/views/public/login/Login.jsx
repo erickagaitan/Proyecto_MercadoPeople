@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
-import { AutentiContext } from '../../context/ContextAutentificacion'
+import { AutentiContext } from '../../../context/ContextAutentificacion'
+import "./login.css"
 
 const Login = () => {
 
@@ -31,7 +32,7 @@ const Login = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container mb-5">
             <div className="d-flex justify-content-center">
                 <div className="card col-lg-5 d-flex align-items-center mt-5 border-0">
                     <h1>Iniciar Sesión</h1>

@@ -1,6 +1,9 @@
+import "./footer.css"
+
+
 const Footer = () => {
     return (
-        <footer className="text-center m-5">
+        <footer className="text-center">
             <br />
             <hr />
             <div className="d-flex justify-content-center">
