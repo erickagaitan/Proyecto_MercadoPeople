@@ -1,24 +1,40 @@
-body{
+body {
   background-color: #ededed;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
+
 .bg-primary {
   background-color: #058ED9 !important;
   color: #fff;
 }
+
 .bg-secondary {
   background-color: #A39A92 !important;
   color: #fff;
 }
+
 .bg-green {
   background-color: #75cc3b !important;
   color: #fff;
 }
-.img-favorites{
+
+.img-favorites {
   display: flex;
   align-items: center;
   height: 10rem;
   width: 300px;
+}
+
+.pay {
+  padding-top: 9rem;
+  text-align: center;
+}
+
+.pay i {
+  font-size: 4rem;
+  display: inline-block;
+  margin-bottom: 2rem;
 }

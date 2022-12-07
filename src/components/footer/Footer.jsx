@@ -3,8 +3,9 @@ import "./footer.css"
 
 const Footer = () => {
     return (
-        <footer className="text-center">
+        <footer className="text-center bg-dark text-white p-5 pt-0">
             <br />
+            <h1 className="p-0 m-0">Mercado People</h1>
             <hr />
             <div className="d-flex justify-content-center">
             <div className="col-lg-3 text-start">

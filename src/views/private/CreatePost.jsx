@@ -1,6 +1,7 @@
 const CreatePost = () => {
     return (
-        <div className="container mt-5 w-50">
+        <div className="container mt-5 w-50 mb-5">
+            <h3 className="p-2">Crear publicación</h3>
             <div className="card p-4">
                 <div class="form-check m-0 p-0">
                     <label>

@@ -1,7 +1,7 @@
 const Favorites = () => {
 
     return (
-        <div className="container mt-5">
+        <div className="container mt-5 mb-5">
             <div className="card p-4">
                 <div class="form-check mx-3">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
