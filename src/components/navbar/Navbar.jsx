@@ -58,9 +58,11 @@ const Navbar = () => {
                     </li>
                         
                     {usuario?.activo ? 
+                    <li className="nav-item ms-4">
                         <Link className="nav-link text-white cursor-pointer" onClick={cerrarSesion}>
                             <strong>Cerrar sesión</strong>
                         </Link>
+                    </li>
                     :
                     <>
                         <li className="nav-item ms-4">
