@@ -6,34 +6,30 @@ const ContextAutentificacion = ({children})=>{
 
     const [usuario, setUsuario]=useState()
     const [cargando, setCargando]=useState(true)
-
+    const [actualizo, setActualizo] = useState()
+ 
     const cerrarSesion = () => {
-        try {
-            const sesion =window.localStorage.getItem('usuario')
-            const usuario = JSON.parse(sesion)
-            usuario.activo = false
-            const nuevoItemStr = JSON.stringify(usuario)
-            localStorage.setItem('usuario', nuevoItemStr)  
-            setUsuario(usuario)
-        } catch (error) {
-            console.log(error)
-        }
+        setUsuario()
+        const sesion = window.localStorage.getItem('usuario')
+        const usuario = JSON.parse(sesion)
+        usuario.activo = false
+        const nuevoItemStr = JSON.stringify(usuario)
+        localStorage.setItem('usuario', nuevoItemStr)  
+        setUsuario()
     }
 
     useEffect (()=>{
-        try {
+        
             const sesion = window.localStorage.getItem('usuario')
             const usuario = JSON.parse(sesion)
-           if(!usuario){
+         
             //const formData = {email: "invitado@gmail.com", password:123456,activo:false}
             //window.localStorage.setItem('usuario',JSON.stringify(formData))
-           }
+         
             setUsuario(usuario)
             setCargando(false)
-        } catch (error) {
-            console.log(error)
-        }
-    },[])
+        
+    },[actualizo])
  
     return (
         <AutentiContext.Provider
@@ -41,7 +37,8 @@ const ContextAutentificacion = ({children})=>{
                 usuario,
                 setUsuario,
                 cargando,
-                cerrarSesion
+                cerrarSesion,
+                setActualizo
             }}
         >
             {children}

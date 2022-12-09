@@ -5,7 +5,7 @@ import { AutentiContext } from '../context/ContextAutentificacion';
 const ProtectedRoute = ({children}) => {
 
     const { usuario } = useContext(AutentiContext)
-    console.log(usuario)
+   
     if(usuario?.activo === true) {
         return children
     } else {

@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { AutentiContext } from '../../../context/ContextAutentificacion'
+import Alert from '../../../components/Alert';
 import { validateEmail } from '../../../utils/validacionCorreo';
 import "./register.css"
 
@@ -18,17 +20,20 @@ const Register = () => {
 
     const [formData, setFormData] = useState(defaultValue());
     const [repeatPassword, setRepeatPassword] = useState()
+    const [mensaje, setMensaje] = useState()
+
+    const { setActualizo } = useContext(AutentiContext)
 
     const registrar = () => {
 
         if (!formData.nombre || !formData.apellido || !formData.ubicacion || !formData.email || !formData.telefono || !formData.password) {
-            alert('Todos los campos son requeridos')
+            setMensaje('Todos los campos son requeridos')
         } else if (!validateEmail(formData.email)) {
-            alert('Debes introducir un correo válido')
+            setMensaje('Debes introducir un correo válido')
         } else if (formData.password !== repeatPassword) {
-            alert('El campo contraseña y repetir contraseña no coinciden')
+            setMensaje('El campo contraseña y repetir contraseña no coinciden')
         } else if (formData.password.length < 6) {
-            alert('La contraseña debe tener minimo 6 caracteres')
+            setMensaje('La contraseña debe tener minimo 6 caracteres')
         } else {
             
             const sesion =window.localStorage.getItem('usuario')
@@ -38,6 +43,8 @@ const Register = () => {
                 alert('ops existe un usuario registrado con el correo:', formData?.email)
             } else {
                 window.localStorage.setItem('usuario',JSON.stringify(formData))
+                const sesion = window.localStorage.getItem('usuario')
+                setActualizo(JSON.stringify(sesion))
             }
         }
     }
@@ -86,8 +93,10 @@ const Register = () => {
                                 onChange= { (e) => setFormData({...formData, password: e.target.value})} 
                             />
                             <label className="mt-3">Confirmar contraseña:</label>
-                            <input className="form-control form-control-lg" type="password" onChange={(e) => setRepeatPassword( e.target.value)}/>
+                            <input className="form-control form-control-lg mb-5" type="password" onChange={(e) => setRepeatPassword( e.target.value)}/>
+                            <Alert mensaje={mensaje} setMensaje={setMensaje}/>
                         </div>
+                       
                         <button 
                             className="btnregistrar btn btn-success mt-3 mb-5 w-50 mt-5"
                             onClick={registrar}
