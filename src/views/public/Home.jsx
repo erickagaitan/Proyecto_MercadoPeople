@@ -1,5 +1,5 @@
 import Banner from "../../components/banner/Banner"
-import Cards from "../../components/product-cards/ProductCard"
+import Cards from "../../components/ProductCard"
 
 const data = [1,2,3,4,5,6]
 const Home = () => {
@@ -9,7 +9,8 @@ const Home = () => {
             <div className="">
                 <Banner />
             </div>
-            <div className="card2">
+            
+            <div className="row d-flex justify-content-center">
                 {data.map(() => (
                     <Cards />
                 )
