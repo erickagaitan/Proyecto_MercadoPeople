@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+// Styles
+import '../src/App.css'
 // Context
 import ContextAutentificacion from './context/ContextAutentificacion'
+import Context from './context/context'
 // Views
 import Navbar from './components/navbar/Navbar'
 import Home from './views/public/Home'
@@ -16,73 +20,92 @@ import Pay from './views/private/Pay'
 import Footer from './components/footer/Footer'
 import ProtectedRoute from './components/ProtectedRoute'
 import PublicRoute from './components/PublicRoute'
-// Styles
-import '../src/App.css'
 
 function App() {
+
+  const [users, setUsers] = useState([])
+  const [categories, setCategories] = useState([])
+
+
+  useEffect(() => {
+    fetch('/users.json')
+      .then((res) => res.json())
+      .then((json) => setUsers(json))
+      .catch((e) => console.log(e))
+  }, [])
+
+  useEffect(() => {
+    fetch('/categories.json')
+      .then((res) => res.json())
+      .then((json) => setCategories(json))
+      .catch((e) => console.log(e))
+  }, [])
+  const globalState = { categories }
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <ContextAutentificacion>
-          <Navbar></Navbar>
-          <Routes>
-            <Route path="/" element={<Home />}>Home</Route>
-            <Route path="/login" element={
-              <PublicRoute>
-                <Login />
-              </PublicRoute>              
+      <Context.Provider value={globalState}>
+        <BrowserRouter>
+          <ContextAutentificacion>
+            <Navbar></Navbar>
+            <Routes>
+              {/* public */}
+              <Route path="/" element={<Home />}>Home</Route>
+              <Route path="/products" element={<Products />}>Products</Route>
+              <Route path="/Detail" element={<DetailProduct />}>Products</Route>
+
+              <Route path="/login" element={
+                <PublicRoute>
+                  <Login />
+                </PublicRoute>
               }>
                 Login
-            </Route>
+              </Route>
 
-            <Route path="/singup" element={
-              <PublicRoute>
-                <Register />
-              </PublicRoute>
+              <Route path="/singup" element={
+                <PublicRoute>
+                  <Register />
+                </PublicRoute>
               }>
-                Login
-            </Route>
-           
-            <Route path="/products" element={<Products />}>Products</Route>
-            <Route path="/Detail" element={<DetailProduct />}>Products</Route>
-            
-            <Route path="/pagar" element={
-              <ProtectedRoute>
-                <Pay />
-              </ProtectedRoute>
-            }>
-               Pay
-            </Route>
-
-            <Route path="/favoritos" element={
-              <ProtectedRoute>
-                <Favorites />
-              </ProtectedRoute>
-            }>
-              Favorites
-            </Route>
+                Registrarte
+              </Route>
 
 
-            <Route path="/carro" element={
-              <ProtectedRoute>
-                <ShoppingCart />
-              </ProtectedRoute>
-            }>
-              Carro
-            </Route>
-            
-            <Route path="/vender" element={
-              <ProtectedRoute>
-                <CreatePost />
-              </ProtectedRoute>
-            }>
-              Vender
-            </Route>
-          </Routes>
-          <Footer></Footer>
-        </ContextAutentificacion>
+              {/* private */}
+              <Route path="/pagar" element={
+                <ProtectedRoute>
+                  <Pay />
+                </ProtectedRoute>
+              }>
+                Pay
+              </Route>
 
-      </BrowserRouter>
+              <Route path="/favoritos" element={
+                <ProtectedRoute>
+                  <Favorites />
+                </ProtectedRoute>
+              }>
+                Favorites
+              </Route>
+              <Route path="/carro" element={
+                <ProtectedRoute>
+                  <ShoppingCart />
+                </ProtectedRoute>
+              }>
+                Carro
+              </Route>
+              <Route path="/vender" element={
+                <ProtectedRoute>
+                  <CreatePost />
+                </ProtectedRoute>
+              }>
+                Vender
+              </Route>
+            </Routes>
+            <Footer></Footer>
+          </ContextAutentificacion>
+        </BrowserRouter>
+      </Context.Provider>
     </div>
   )
 }

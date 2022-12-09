@@ -1,0 +1,60 @@
+[
+    {
+      "id": "1",
+      "name": "Esteban",
+      "last_name": "Rojas",
+      "avatar": "",
+      "address": [
+        {
+            "id": "1",
+            "name": "direccion 1"
+        },
+        {
+            "id": "2",
+            "name": "direccion 2"
+        }
+      ],
+      "phone": "123456789",
+      "email": "es.rojasa@gmail.com"
+     
+    },
+    {
+      "id": "2",
+      "name": "Belen",
+      "last_name": "Bravo",
+      "avatar": "",
+      "address": [
+        {
+            "id": "1",
+            "name": "direccion 1"
+        },
+        {
+            "id": "2",
+            "name": "direccion 2"
+        }
+      ],
+      "phone": "123456789",
+      "email": "belen@gmail.com"
+     
+    },
+    {
+      "id": "3",
+      "name": "Ericka",
+      "last_name": "Ericka",
+      "avatar": "",
+      "address": [
+        {
+            "id": "1",
+            "name": "direccion 1"
+        },
+        {
+            "id": "2",
+            "name": "direccion 2"
+        }
+      ],
+      "phone": "123456789",
+      "email": "Ericka@gmail.com"
+     
+    }    
+  ]
+  
