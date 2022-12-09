@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { AutentiContext } from '../../../context/ContextAutentificacion'
 import Alert from '../../../components/Alert';
 import { validateEmail } from '../../../utils/validacionCorreo';
 import "./register.css"
@@ -21,6 +22,8 @@ const Register = () => {
     const [repeatPassword, setRepeatPassword] = useState()
     const [mensaje, setMensaje] = useState()
 
+    const { setActualizo } = useContext(AutentiContext)
+
     const registrar = () => {
 
         if (!formData.nombre || !formData.apellido || !formData.ubicacion || !formData.email || !formData.telefono || !formData.password) {
@@ -40,6 +43,8 @@ const Register = () => {
                 alert('ops existe un usuario registrado con el correo:', formData?.email)
             } else {
                 window.localStorage.setItem('usuario',JSON.stringify(formData))
+                const sesion = window.localStorage.getItem('usuario')
+                setActualizo(JSON.stringify(sesion))
             }
         }
     }
