@@ -1,147 +1,136 @@
 [
     {
-        "woman": [
+        "category":"woman",
+        "title": "Jeans Wrangler Mom",
+        "user_id": "1",
+        "description": "Mom jeans, lo último en comodidad y estilo. Estos jeans de tiro alto van con todo. Un diseño relajado y cómodo, pero a la vez atractivo y duradero, convertirán a esta prenda en un imprescindible para tu clóset.",
+        "price": "$29.990",
+        "img": "https://images.unsplash.com/photo-1610890833108-ded89b9dcc45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80",
+        "features": [
             {
-                "title": "Jeans Wrangler Mom",
-                "user_id": "1",
-                "description": "Mom jeans, lo último en comodidad y estilo. Estos jeans de tiro alto van con todo. Un diseño relajado y cómodo, pero a la vez atractivo y duradero, convertirán a esta prenda en un imprescindible para tu clóset.",
-                "price": "$29.990",
-                "img": "https://images.unsplash.com/photo-1610890833108-ded89b9dcc45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80",
-                "features": [
-                    {
-                        "made_in": "Chile",
-                        "color": "Azul",
-                        "type_cloth": "Jean"
-                    }
-                ]
-            },
-            {
-                "title": "Crop Top Verde Canalé",
-                "user_id": "2",
-                "description": "Hermoso top canalé, de cuello redondo, ideal para estas altas temperaturas. Es un diseño casual con el cual se puede comvinar con cualquier otra prenda.",
-                "price": "$8.990",
-                "img": "https://img.ltwebstatic.com/images3_pi/2021/06/10/1623328834beeef95cc7c6e637ecae8a50afde224d_thumbnail_600x.webp",
-                "features": [
-                    {
-                        "made_in": "Chile",
-                        "color": "Azul",
-                        "type_cloth": "Jean"
-                    }
-                ]
-            },
-            {
-                "title": "Blusa De Vestir Formal",
-                "user_id": "3",
-                "description": "Cuello de solapa, puños torneados, el estilo también se ha actualizado y el cuello interior es de un color contrastante para una apariencia moderna y sofisticada.",
-                "price": "$19.990",
-                "img": "https://img.ltwebstatic.com/images3_pi/2020/08/07/15967807527cba0ae5840b71f42194d4bacaa06b32_thumbnail_600x.webp",
-                "features": [
-                    {
-                        "made_in": "Chile",
-                        "color": "Azul",
-                        "type_cloth": "Jean"
-                    }
-                ]
+                "made_in": "Chile",
+                "color": "Azul",
+                "type_cloth": "Jean"
             }
         ]
     },
     {
-        "men": [
+        "category":"woman",
+        "title": "Crop Top Verde Canalé",
+        "user_id": "2",
+        "description": "Hermoso top canalé, de cuello redondo, ideal para estas altas temperaturas. Es un diseño casual con el cual se puede comvinar con cualquier otra prenda.",
+        "price": "$8.990",
+        "img": "https://img.ltwebstatic.com/images3_pi/2021/06/10/1623328834beeef95cc7c6e637ecae8a50afde224d_thumbnail_600x.webp",
+        "features": [
             {
-                "title": "Jeans Slim Lavado Azul Hombre",
-                "user_id": "2",
-                "description": "El mejor looks de moda juvenil, una propuesta de tendencia, innovadora y al precio más conveniente. La últíma moda en Jeans la tenemos para tí.",
-                "price": "$24.990",
-                "img": "https://http2.mlstatic.com/D_NQ_NP_761925-MLC50808432913_072022-O.webp",
-                "features": [
-                    {
-                        "made_in": "Chile",
-                        "color": "Azul",
-                        "type_cloth": "Jean"
-                    }
-                ]
-            },
-            {
-                "title": "Jeans Wrangler Larston",
-                "user_id": "2",
-                "description": "Nuestros distintivos jeans slim fit con una silueta impecable. Marca estilo gracias a nuestros clásicos jeans Larston. Con una moderna pierna entallada y un clásico diseño de 5 bolsillos.",
-                "price": "$42.990",
-                "img": "https://http2.mlstatic.com/D_NQ_NP_984547-MLC51362828647_082022-O.webp",
-                "features": [
-                    {
-                        "made_in": "Chile",
-                        "color": "Azul",
-                        "type_cloth": "Jean"
-                    }
-                ]
-            },
-            {
-                "title": "Polera Hombre Cuello Redondo Botones Molle Uv+pro Lenga",
-                "user_id": "3",
-                "description": "La polera Molle de LENGA®, es ideal para andar cómodo ya sea para uso diario, recreacional o aventura, esta compuesta de algodón en su totalidad, tiene un tacto suave muy agradable y un calce ideal para disfrutar de su comodidad.",
-                "price": "$14.990",
-                "img": "https://http2.mlstatic.com/D_NQ_NP_801374-MLC52252018296_112022-O.webp",
-                "features": [
-                    {
-                        "made_in": "Chile",
-                        "color": "Azul",
-                        "type_cloth": "Jean"
-                    }
-                ]
+                "made_in": "Chile",
+                "color": "Azul",
+                "type_cloth": "Jean"
             }
         ]
     },
     {
-        "boy_and_girl": [
+        "category":"woman",
+        "title": "Blusa De Vestir Formal",
+        "user_id": "3",
+        "description": "Cuello de solapa, puños torneados, el estilo también se ha actualizado y el cuello interior es de un color contrastante para una apariencia moderna y sofisticada.",
+        "price": "$19.990",
+        "img": "https://img.ltwebstatic.com/images3_pi/2020/08/07/15967807527cba0ae5840b71f42194d4bacaa06b32_thumbnail_600x.webp",
+        "features": [
             {
-                "title": "Crop Top Verde Canalé",
-                "user_id": "3",
-                "description": "Hermoso top canalé, de cuello redondo, ideal para estas altas temperaturas. Es un diseño casual con el cual se puede comvinar con cualquier otra prenda.",
-                "price": "$8.990",
-                "img": "https://img.ltwebstatic.com/images3_pi/2021/06/10/1623328834beeef95cc7c6e637ecae8a50afde224d_thumbnail_600x.webp",
-                "features": [
-                    {
-                        "made_in": "Chile",
-                        "color": "Azul",
-                        "type_cloth": "Jean"
-                    }
-                ]
+                "made_in": "Chile",
+                "color": "Azul",
+                "type_cloth": "Jean"
             }
         ]
     },
     {
-        "footwear": [
+        "category":"men",
+        "title": "Jeans Slim Lavado Azul Hombre",
+        "user_id": "2",
+        "description": "El mejor looks de moda juvenil, una propuesta de tendencia, innovadora y al precio más conveniente. La últíma moda en Jeans la tenemos para tí.",
+        "price": "$24.990",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_761925-MLC50808432913_072022-O.webp",
+        "features": [
             {
-                "title": "Crop Top Verde Canalé",
-                "user_id": "3",
-                "description": "Hermoso top canalé, de cuello redondo, ideal para estas altas temperaturas. Es un diseño casual con el cual se puede comvinar con cualquier otra prenda.",
-                "price": "$8.990",
-                "img": "https://img.ltwebstatic.com/images3_pi/2021/06/10/1623328834beeef95cc7c6e637ecae8a50afde224d_thumbnail_600x.webp",
-                "features": [
-                    {
-                        "made_in": "Chile",
-                        "color": "Azul",
-                        "type_cloth": "Jean"
-                    }
-                ]
+                "made_in": "Chile",
+                "color": "Azul",
+                "type_cloth": "Jean"
             }
         ]
     },
     {
-        "accessories": [
+        "category":"men",
+        "title": "Jeans Wrangler Larston",
+        "user_id": "2",
+        "description": "Nuestros distintivos jeans slim fit con una silueta impecable. Marca estilo gracias a nuestros clásicos jeans Larston. Con una moderna pierna entallada y un clásico diseño de 5 bolsillos.",
+        "price": "$42.990",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_984547-MLC51362828647_082022-O.webp",
+        "features": [
             {
-                "title": "Crop Top Verde Canalé",
-                "user_id": "3",
-                "description": "Hermoso top canalé, de cuello redondo, ideal para estas altas temperaturas. Es un diseño casual con el cual se puede comvinar con cualquier otra prenda.",
-                "price": "$8.990",
-                "img": "https://img.ltwebstatic.com/images3_pi/2021/06/10/1623328834beeef95cc7c6e637ecae8a50afde224d_thumbnail_600x.webp",
-                "features": [
-                    {
-                        "made_in": "Chile",
-                        "color": "Azul",
-                        "type_cloth": "Jean"
-                    }
-                ]
+                "made_in": "Chile",
+                "color": "Azul",
+                "type_cloth": "Jean"
+            }
+        ]
+    },
+    {
+        "category":"men",
+        "title": "Polera Hombre Cuello Redondo Botones Molle Uv+pro Lenga",
+        "user_id": "3",
+        "description": "La polera Molle de LENGA®, es ideal para andar cómodo ya sea para uso diario, recreacional o aventura, esta compuesta de algodón en su totalidad, tiene un tacto suave muy agradable y un calce ideal para disfrutar de su comodidad.",
+        "price": "$14.990",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_801374-MLC52252018296_112022-O.webp",
+        "features": [
+            {
+                "made_in": "Chile",
+                "color": "Azul",
+                "type_cloth": "Jean"
+            }
+        ]
+    },
+    {
+        "category":"boy_and_girl",
+        "title": "Crop Top Verde Canalé",
+        "user_id": "3",
+        "description": "Hermoso top canalé, de cuello redondo, ideal para estas altas temperaturas. Es un diseño casual con el cual se puede comvinar con cualquier otra prenda.",
+        "price": "$8.990",
+        "img": "https://img.ltwebstatic.com/images3_pi/2021/06/10/1623328834beeef95cc7c6e637ecae8a50afde224d_thumbnail_600x.webp",
+        "features": [
+            {
+                "made_in": "Chile",
+                "color": "Azul",
+                "type_cloth": "Jean"
+            }
+        ]
+    },
+    {
+        "category":"footwear",
+        "title": "Crop Top Verde Canalé",
+        "user_id": "3",
+        "description": "Hermoso top canalé, de cuello redondo, ideal para estas altas temperaturas. Es un diseño casual con el cual se puede comvinar con cualquier otra prenda.",
+        "price": "$8.990",
+        "img": "https://img.ltwebstatic.com/images3_pi/2021/06/10/1623328834beeef95cc7c6e637ecae8a50afde224d_thumbnail_600x.webp",
+        "features": [
+            {
+                "made_in": "Chile",
+                "color": "Azul",
+                "type_cloth": "Jean"
+            }
+        ]
+    },
+    {
+        "category":"accessories",
+        "title": "Crop Top Verde Canalé",
+        "user_id": "3",
+        "description": "Hermoso top canalé, de cuello redondo, ideal para estas altas temperaturas. Es un diseño casual con el cual se puede comvinar con cualquier otra prenda.",
+        "price": "$8.990",
+        "img": "https://img.ltwebstatic.com/images3_pi/2021/06/10/1623328834beeef95cc7c6e637ecae8a50afde224d_thumbnail_600x.webp",
+        "features": [
+            {
+                "made_in": "Chile",
+                "color": "Azul",
+                "type_cloth": "Jean"
             }
         ]
     }
