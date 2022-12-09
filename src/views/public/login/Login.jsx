@@ -1,11 +1,14 @@
 import React, { useContext, useState } from 'react'
 import { AutentiContext } from '../../../context/ContextAutentificacion'
+import Alert from '../../../components/Alert';
 import "./login.css"
 
 const Login = () => {
 
     const [ email, setEmail ] = useState()
     const [ password, setPassword ] = useState()
+    const [mensaje, setMensaje] = useState()
+
     const { setUsuario } = useContext(AutentiContext)
    
     const iniciarSesion = () => {
@@ -14,12 +17,12 @@ const Login = () => {
             const usuario = JSON.parse(sesion)
 
             if(!sesion){
-                alert('Usuario no existe')
+                 setMensaje('Usuario no existe')
             } else if (usuario?.email != email){
                 console.log(usuario?.email != email)
-                alert('usuario no existe')
+                 setMensaje('usuario no existe')
             } else if (usuario?.password != password){
-                alert('La contraseña es incorrecta')
+                 setMensaje('La contraseña es incorrecta')
             } else {
                 usuario.activo = true
                 const nuevoItemStr = JSON.stringify(usuario)
@@ -41,7 +44,8 @@ const Login = () => {
                             <label className="mt-3">Usuario:</label>
                             <input className="form-control form-control-lg" type="text" onChange= {(e) => setEmail(e.target.value)} />
                             <label className="mt-3">Contraseña:</label>
-                            <input className="form-control form-control-lg" type="password" onChange= {(e) => setPassword(e.target.value)} />
+                            <input className="form-control form-control-lg  mb-5" type="password" onChange= {(e) => setPassword(e.target.value)} />
+                            <Alert mensaje={mensaje} setMensaje={setMensaje}/>
                         </div>
                         <button className="btn btn-success mt-3 mb-5 w-50" onClick={iniciarSesion} >Acceder</button>
                     </div>
