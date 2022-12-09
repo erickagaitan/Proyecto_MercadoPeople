@@ -11,7 +11,7 @@ const Home = () => {
             </div>
             
             <h1>RENUÉVATE EN ESTA TEMPORADA</h1>
-            <div className="row d-flex justify-content-center">
+            <div className="row d-flex justify-content-center bg-white pt-5 pb-5">
                 {data.map(() => (
                     <Cards />
                 ))}
