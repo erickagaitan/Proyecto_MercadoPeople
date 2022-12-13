@@ -29,11 +29,6 @@ const Navbar = () => {
                     </li>
 
                     <li className="nav-item">
-                        <Link className="nav-link text-white cursor-pointer" to="/favoritos">
-                            Favoritos
-                        </Link>
-                    </li>
-                    <li className="nav-item">
                         <Link className="nav-link text-white cursor-pointer" to="/vender">
                             Vender
                         </Link>
@@ -59,9 +54,23 @@ const Navbar = () => {
                         
                     {usuario?.activo ? 
                     <li className="nav-item ms-4">
-                        <Link className="nav-link text-white cursor-pointer" onClick={() => cerrarSesion()}>
-                            <strong>Cerrar sesión</strong>
-                        </Link>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {usuario?.email}
+                            </button>
+                            <ul class="dropdown-menu">
+                                <Link className="nav-link cursor-pointer dropdown-item" to="#">
+                                    Editar mis datos
+                                </Link>
+                                <Link className="nav-link cursor-pointer dropdown-item" to="/favoritos">
+                                    Mis favoritos
+                                </Link>
+                                <Link className="nav-link cursor-pointer dropdown-item" onClick={() => cerrarSesion()}>
+                                    Cerrar sesión
+                                </Link>
+                                
+                            </ul>
+                        </div>
                     </li>
                     :
                     <>
