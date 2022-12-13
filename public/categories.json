@@ -7,6 +7,7 @@
         "price": "$29.990",
         "img": "https://images.unsplash.com/photo-1610890833108-ded89b9dcc45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80",
         "features": [ "Color: Azul", "Material: Jean", "Hecho: Chile"]
+
     },
     {
         "category":"woman",
@@ -25,6 +26,7 @@
         "price": "$19.990",
         "img": "https://img.ltwebstatic.com/images3_pi/2020/08/07/15967807527cba0ae5840b71f42194d4bacaa06b32_thumbnail_600x.webp",
         "features": [ "Color: Blanco", "Material: Satin", "Hecho: Chile"]
+
     },
     {
         "category":"men",
