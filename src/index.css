@@ -28,6 +28,10 @@ body {
   width: 300px;
 }
 
+ul {
+  list-style: none;
+}
+
 .pay {
   padding-top: 9rem;
   text-align: center;

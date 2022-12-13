@@ -52,7 +52,7 @@ function App() {
               {/* public */}
               <Route path="/" element={<Home />}>Home</Route>
               <Route path="/products" element={<Products />}>Products</Route>
-              <Route path="/Detail" element={<DetailProduct />}>Products</Route>
+              <Route path="/detail/:user_id" element={<DetailProduct />}>Detail</Route>
 
               <Route path="/login" element={
                 <PublicRoute>
