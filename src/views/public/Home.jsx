@@ -5,19 +5,20 @@ const data = [1,2,3,4,5,6]
 const Home = () => {
 
     return (
-        <div className="container mb-5">
+        <>
             <div className="">
                 <Banner />
             </div>
+            <div className="container mb-5">    
+                <h1>RENUÉVATE EN ESTA TEMPORADA</h1>
+                <div className="row d-flex justify-content-center bg-white pt-5 pb-5">
+                    {data.map(() => (
+                        <Cards />
+                    ))}
+                </div>
             
-            <h1>RENUÉVATE EN ESTA TEMPORADA</h1>
-            <div className="row d-flex justify-content-center bg-white pt-5 pb-5">
-                {data.map(() => (
-                    <Cards />
-                ))}
             </div>
-           
-        </div>
+        </>
     )
 }
 
