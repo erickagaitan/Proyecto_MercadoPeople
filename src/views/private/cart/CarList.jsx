@@ -1,13 +1,13 @@
 import Swal from 'sweetalert2'
 
 const CartList = ({ cart, addToCart, removeFromCart, cartTotal }) => {
-    const pay = ()=>{
+    const pay = () => {
         Swal.fire({
             title: 'Exito!',
             text: 'El pago se ha realizado con exito.',
             icon: 'success',
             confirmButtonText: 'Aceptar'
-          })
+        })
     }
     return (
         <div className="container mt-5 mb-5">
@@ -30,8 +30,8 @@ const CartList = ({ cart, addToCart, removeFromCart, cartTotal }) => {
                                             <div className="card-body p-0 col-lg-5">
                                                 <h5 className="card-title text-lg-start">{item.title}</h5>
                                                 <div className="d-flex justify-content-center justify-content-lg-start mt-4 mt-lg-0">
-                                                    <p className="m-0 mx-2 mx-lg-0 text-primary">Eliminar</p>
-                                                    <p className="m-0 mx-2 text-primary">Comprar ahora</p>
+                                                    <p className="card-text m-0"><button className="btn text-primary p-0 m-0 border-0" onClick={() => removeFromCart(item)}>Eliminar</button></p>
+                                                    <p className="card-text m-0 mx-2"><button className="btn text-primary p-0 m-0 border-0" onClick={() => pay()}>Comprar ahora</button></p>
                                                 </div>
                                             </div>
                                             <div className="card-body mt-4 mt-lg-0 p-0 d-flex justify-content-lg-end justify-content-center align-items-center">
