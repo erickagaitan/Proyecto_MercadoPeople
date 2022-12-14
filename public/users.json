@@ -15,7 +15,8 @@
         }
       ],
       "phone": "123456789",
-      "email": "es.rojasa@gmail.com"
+      "email": "es.rojasa@gmail.com",
+      "pass": "123"
      
     },
     {
@@ -34,7 +35,8 @@
         }
       ],
       "phone": "123456789",
-      "email": "belen@gmail.com"
+      "email": "belen@gmail.com",
+      "pass": "123"
      
     },
     {
@@ -53,7 +55,8 @@
         }
       ],
       "phone": "123456789",
-      "email": "Ericka@gmail.com"
+      "email": "Ericka@gmail.com",
+      "pass": "123"
      
     }    
   ]

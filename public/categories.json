@@ -1,139 +1,212 @@
 [
     {
-        "category":"woman",
+        "id": 1,
+        "category": "woman",
         "title": "Jeans Wrangler Mom",
         "user_id": "1",
         "description": "Mom jeans, lo último en comodidad y estilo. Estos jeans de tiro alto van con todo. Un diseño relajado y cómodo, pero a la vez atractivo y duradero, convertirán a esta prenda en un imprescindible para tu clóset.",
-        "price": "$29.990",
+        "price": 29.999,
         "img": "https://images.unsplash.com/photo-1610890833108-ded89b9dcc45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80",
-        "features": [ "Color: Azul", "Material: Jean", "Hecho: Chile"]
-
+        "features": [
+            "Color: Azul",
+            "Material: Jean",
+            "Hecho: Chile"
+        ]
     },
     {
-        "category":"woman",
+        "id": 2,
+        "category": "woman",
         "title": "Crop Top Verde Canalé",
         "user_id": "2",
         "description": "Hermoso top canalé, de cuello redondo, ideal para estas altas temperaturas. Es un diseño casual con el cual se puede combinar con cualquier otra prenda.",
-        "price": "$8.990",
+        "price": 8.999,
         "img": "https://img.ltwebstatic.com/images3_pi/2021/06/10/1623328834beeef95cc7c6e637ecae8a50afde224d_thumbnail_600x.webp",
-        "features": [ "Color: Verde", "Material: Canelé", "Hecho: Chile"]
+        "features": [
+            "Color: Verde",
+            "Material: Canelé",
+            "Hecho: Chile"
+        ]
     },
     {
-        "category":"woman",
+        "id": 3,
+        "category": "woman",
         "title": "Blusa De Vestir Formal",
         "user_id": "3",
         "description": "Cuello de solapa, puños torneados, el estilo también se ha actualizado y el cuello interior es de un color contrastante para una apariencia moderna y sofisticada.",
-        "price": "$19.990",
+        "price": 19.999,
         "img": "https://img.ltwebstatic.com/images3_pi/2020/08/07/15967807527cba0ae5840b71f42194d4bacaa06b32_thumbnail_600x.webp",
-        "features": [ "Color: Blanco", "Material: Satin", "Hecho: Chile"]
-
+        "features": [
+            "Color: Blanco",
+            "Material: Satin",
+            "Hecho: Chile"
+        ]
     },
     {
-        "category":"men",
+        "id": 4,
+        "category": "men",
         "title": "Jeans Slim Lavado Azul Hombre",
         "user_id": "4",
         "description": "El mejor looks de moda juvenil, una propuesta de tendencia, innovadora y al precio más conveniente. La últíma moda en Jeans la tenemos para tí.",
-        "price": "$24.990",
+        "price": 24.999,
         "img": "https://http2.mlstatic.com/D_NQ_NP_761925-MLC50808432913_072022-O.webp",
-        "features": [ "Color: Azul", "Material: Jean", "Hecho: Chile"]
+        "features": [
+            "Color: Azul",
+            "Material: Jean",
+            "Hecho: Chile"
+        ]
     },
     {
-        "category":"men",
+        "id": 5,
+        "category": "men",
         "title": "Jeans Wrangler Larston Hombre",
         "user_id": "5",
         "description": "Nuestros distintivos jeans slim fit con una silueta impecable. Marca estilo gracias a nuestros clásicos jeans Larston. Con una moderna pierna entallada y un clásico diseño de 5 bolsillos.",
-        "price": "$42.990",
+        "price": 42.999,
         "img": "https://http2.mlstatic.com/D_NQ_NP_984547-MLC51362828647_082022-O.webp",
-        "features": [ "Color: Azul", "Material: Jean", "Hecho: Chile"]
+        "features": [
+            "Color: Azul",
+            "Material: Jean",
+            "Hecho: Chile"
+        ]
     },
     {
-        "category":"men",
+        "id": 6,
+        "category": "men",
         "title": "Polera Hombre Cuello Redondo Botones",
         "user_id": "6",
         "description": "La polera Molle de LENGA®, es ideal para andar cómodo ya sea para uso diario, recreacional o aventura, esta compuesta de algodón en su totalidad, tiene un tacto suave muy agradable y un calce ideal para disfrutar de su comodidad.",
-        "price": "$14.990",
+        "price": 14.999,
         "img": "https://s3-sa-east-1.amazonaws.com/centryproduction/belanit-inventario/products/630faed778f7d40b5b342e48/image/630faed778f7d40b5b342e48/original/PTV31700N009_120220831-2907-v8i8dd.JPG",
-        "features": [ "Color: Negro", "Material: Algodón", "Hecho: Chile"]
+        "features": [
+            "Color: Negro",
+            "Material: Algodón",
+            "Hecho: Chile"
+        ]
     },
     {
-        "category":"boy_and_girl",
+        "id": 7,
+        "category": "boy_and_girl",
         "title": "Vestido Niña",
         "user_id": "7",
         "description": "vestido casual sin mangas es justo lo que necesitas. Las niñas pueden usarlo en primavera y verano, y la tela transpirable y elástica hace que se use bien a principios o finales del verano. ",
-        "price": "$17.990",
+        "price": 17.999,
         "img": "https://http2.mlstatic.com/D_NQ_NP_815546-MLC52224511917_102022-O.webp",
-        "features": [ "Color: Rosa", "Material: Algodón", "Hecho: Chile"]
+        "features": [
+            "Color: Rosa",
+            "Material: Algodón",
+            "Hecho: Chile"
+        ]
     },
     {
-        "category":"boy_and_girl",
+        "id": 8,
+        "category": "boy_and_girl",
         "title": "Pijama Niña Minnie Shine Rosado Disney",
         "user_id": "8",
         "description": "Minnie, la ratoncita más tierna y encantadora del maravilloso mundo de Disney. Ideal pijama para las niñas de la casa, con manga corta para esta temporada con material de algodon.",
-        "price": "$13.990",
+        "price": 13.999,
         "img": "https://http2.mlstatic.com/D_NQ_NP_934761-MLC51441492166_092022-O.webp",
-        "features": [ "Color: Rosa", "Material: Algodón", "Hecho: Chile"]
-    }, 
+        "features": [
+            "Color: Rosa",
+            "Material: Algodón",
+            "Hecho: Chile"
+        ]
+    },
     {
-        "category":"boy_and_girl",
+        "id": 9,
+        "category": "boy_and_girl",
         "title": "Pijama Niño Mickey ",
         "user_id": "9",
         "description": "Conjunto de pijama niño de Mickey, compuesto de una polera manga corta y un short de algodón, perfecto para esta temporada de primavera-verano. ",
-        "price": "$14.990",
+        "price": 14.999,
         "img": "https://http2.mlstatic.com/D_NQ_NP_675705-MLC49021553581_022022-O.webp",
-        "features": [ "Color: Gris", "Material: Algodón", "Hecho: Chile"]
+        "features": [
+            "Color: Gris",
+            "Material: Algodón",
+            "Hecho: Chile"
+        ]
     },
     {
-        "category":"footwear",
+        "id": 10,
+        "category": "footwear",
         "title": "Zapato Sharoon Negro",
         "user_id": "10",
         "description": "Hermosos zapatos de charol, ideal para combinar tus looks de fin de año. Son un diseño clasico que nunca pasan de moda, con material resistente y plantillas de cuero. ",
-        "price": "$24.990",
+        "price": 24.999,
         "img": "https://http2.mlstatic.com/D_NQ_NP_990227-MLC48496354411_122021-O.webp",
-        "features": [ "Color: Negro", "Material: Charol", "Hecho: Chile"]
+        "features": [
+            "Color: Negro",
+            "Material: Charol",
+            "Hecho: Chile"
+        ]
     },
     {
-        "category":"footwear",
+        "id": 11,
+        "category": "footwear",
         "title": "Zapatilla Converse Run Star Hike Plataforma Mujer Negro",
         "user_id": "11",
         "description": "El diseño relajado de la icónica zapatilla Chuck Taylor All Star High Top da un giro inspirado en el senderismo en la Run Star Hike al presentarse con una plataforma voluminosa y una suela de goma dentada. ",
-        "price": "$76.990",
+        "price": 76.999,
         "img": "https://http2.mlstatic.com/D_NQ_NP_979388-MLC46141826400_052021-O.webp",
-        "features": [ "Color: Negro", "Material: Tela", "Hecho: Chile"]
-    },  
+        "features": [
+            "Color: Negro",
+            "Material: Tela",
+            "Hecho: Chile"
+        ]
+    },
     {
-        "category":"footwear",
+        "id": 12,
+        "category": "footwear",
         "title": "Zapatilla Urbana Hombre Adidas",
         "user_id": "12",
         "description": "Estilo informal de corte bajo. Estas zapatillas lucen las 3 Tiras cosidas sobre el costado exterior y sutiles perforaciones que forman las 3 Tiras en el costado interior.",
-        "price": "$44.990",
+        "price": 44.999,
         "img": "https://www.hites.com/dw/image/v2/BDPN_PRD/on/demandware.static/-/Sites-mastercatalog_HITES/default/dwe4b29175/images/original/zapatilla/736560001.jpg?sw=1000&sh=1000",
-        "features": [ "Color: Negro", "Material: Cuero", "Hecho: Chile"]
+        "features": [
+            "Color: Negro",
+            "Material: Cuero",
+            "Hecho: Chile"
+        ]
     },
     {
-        "category":"accessories",
+        "id": 13,
+        "category": "accessories",
         "title": "15 piezas Anillos con diseños",
         "user_id": "13",
         "description": "Son 15 anillos con diseño muy bonito, son sencillitos, son brillosos, se pueden ir alternando de acuerdo a tu atuendo. Son de diferentes tamaños.",
-        "price": "$7.990",
+        "price": 7.999,
         "img": "https://img.ltwebstatic.com/images3_pi/2021/06/03/162270507537cd2bd41bd4f247ac3e31e22d8bcf15_thumbnail_600x.webp",
-        "features": [ "Color: Dorado", "Material: Metal", "Hecho: China"]
-    }, 
+        "features": [
+            "Color: Dorado",
+            "Material: Metal",
+            "Hecho: China"
+        ]
+    },
     {
-        "category":"accessories",
+        "id": 14,
+        "category": "accessories",
         "title": "2 piezas Reloj electrónico minimalista deportivo",
         "user_id": "14",
         "description": "Hermosos relojes muy minimalistas, son ideales para hacer ejercicios ya que cumplen con esa función, aparte de tener la fecha y hora, funciona de manera tactil.",
-        "price": "$12.990",
+        "price": 12.999,
         "img": "https://img.ltwebstatic.com/images3_pi/2022/04/29/1651195062d6f68eba59b99a6a3231a6cb9a4896c4_thumbnail_600x.webp",
-        "features": [ "Color: Negro y Rosa", "Material: Metal", "Hecho: China"]
+        "features": [
+            "Color: Negro y Rosa",
+            "Material: Metal",
+            "Hecho: China"
+        ]
     },
     {
-        "category":"accessories",
+        "id": 15,
+        "category": "accessories",
         "title": "Gafas de moda aviadores",
         "user_id": "15",
         "description": "Hermosos lentes de sol de buena calidad, viene con su caja y un paño para limpiarlos. Ideales para estas altas temperaturas en donde es necesario proteger nuestros ojos de los rayos uv.",
-        "price": "$13.990",
+        "price": 13.999,
         "img": "https://img.ltwebstatic.com/images3_pi/2021/06/17/162391493510ee20ce4c60c2c02af254c3b1053537_thumbnail_600x.webp",
-        "features": [ "Color: Negro", "Material: Metal", "Hecho: Chile"]
+        "features": [
+            "Color: Negro",
+            "Material: Metal",
+            "Hecho: Chile"
+        ]
     }
 ]
