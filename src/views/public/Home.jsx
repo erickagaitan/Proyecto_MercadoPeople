@@ -28,6 +28,7 @@ const Home = () => {
                         width="15rem" 
                         price={respuesta.price}
                         title={respuesta.title}
+                        id={respuesta.id}
                     />
                         
                 ))}

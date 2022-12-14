@@ -4,9 +4,9 @@ const Features = ({ features })=> {
             <p><strong>Características</strong></p>
             <ul>
                 {
-                    features.map((features)=> {
+                    features.map((features,i)=> {
                         return(
-                            <li key={features}>{ features }</li>
+                            <li key={i}>{ features }</li>
                         )
                     })
 

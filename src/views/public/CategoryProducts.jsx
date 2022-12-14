@@ -37,15 +37,15 @@ const Products = () => {
 
             <nav className="navbar bg-light">
                 <div className="container">
-                    <div class="col-lg-12">
-                        <div class="input-group flex-nowrap h-100">
+                    <div className="col-lg-12">
+                        <div className="input-group flex-nowrap h-100">
                             <input
                                 type="text"
-                                class="form-control form-control-sm border-end-0"
+                                className="form-control form-control-sm border-end-0"
                                 placeholder="Buscar productos" onChange={(e) => setValue(e.target.value)} aria-label="Search"
                             />
-                            <span class="input-group-text p-3 border-start-0" id="addon-wrapping"
-                            > <i class="fa-solid fa-magnifying-glass"></i></span>
+                            <span className="input-group-text p-3 border-start-0" id="addon-wrapping"
+                            > <i className="fa-solid fa-magnifying-glass"></i></span>
                         </div>
                     </div>
                 </div>

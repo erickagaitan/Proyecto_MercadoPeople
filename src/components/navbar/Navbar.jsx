@@ -8,7 +8,7 @@ import Context from "../../context/context"
 const Navbar = () => {
 
     const { usuario, cerrarSesion, cargando } = useContext(AutentiContext);
-    const { cartTotal } = useContext(Context);
+    const { cartTotal, formatNumberES } = useContext(Context);
 
     if (cargando) return <h1>Cargando ...</h1>
 
@@ -31,24 +31,31 @@ const Navbar = () => {
 
                 <ul className="navbar-nav ">
 
-                 
+
                     <li className="}nav-item">
                         <span className="nav-link text-white cursor-pointer"></span>
                     </li>
                     {usuario?.activo ?
-                        <li className="nav-item">
-                            <Link className="nav-link text-white cursor-pointer" to="/vender">
-                                Vender
-                            </Link>
-                        </li>
-                    :null}
+                        <div className="d-flex align-items-center">
+                            <li className="nav-item">
+                                <Link className="nav-link text-white cursor-pointer" to="/vender">
+                                    Crear Publicación
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link text-white dropdown-item" to="/favoritos">
+                                    Mis favoritos
+                                </Link>
+                            </li>
+                        </div>
+                        : null}
 
-                {/* public */}
+                    {/* public */}
 
                     {usuario?.activo &&
                         <li className="nav-item">
                             <Link className="nav-link text-white cursor-pointer" to="/carro">
-                                <i className="fa-solid fa-cart-shopping"> ${cartTotal() === 0 ? 0 : cartTotal().toFixed(3)}</i>
+                                <i className="fa-solid fa-cart-shopping"> ${cartTotal() === 0 ? 0 : formatNumberES(cartTotal())}</i>
                             </Link>
                         </li>
                     }
@@ -59,9 +66,7 @@ const Navbar = () => {
                                     {usuario?.email}
                                 </button>
                                 <ul className="dropdown-menu">
-                                    <Link className="nav-link cursor-pointer dropdown-item" to="/favoritos">
-                                        Mis favoritos
-                                    </Link>
+
                                     <Link className="nav-link cursor-pointer dropdown-item" onClick={() => cerrarSesion()}>
                                         Cerrar sesión
                                     </Link>

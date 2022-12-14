@@ -3,7 +3,7 @@ import CartList from "./CarList"
 import Context from "../../../context/context"
 
 const ShoppingCart = () => {
-    const { cart, addToCart, removeFromCart, cartTotal } = useContext(Context)
+    const { cart, addToCart, removeFromCart, cartTotal, formatNumberES, removeProductCart } = useContext(Context)
 
     return (
         <main className="col-lg-12 mt-5 text-center ">
@@ -15,7 +15,10 @@ const ShoppingCart = () => {
                             cart={cart}
                             addToCart={addToCart}
                             removeFromCart={removeFromCart}
-                            cartTotal={cartTotal}>
+                            removeProductCart={removeProductCart}
+                            cartTotal={cartTotal}
+                            formatNumberES={formatNumberES}
+                        >
                         </CartList>
                         : <p>No hay elementos en el carrito</p>
                 }

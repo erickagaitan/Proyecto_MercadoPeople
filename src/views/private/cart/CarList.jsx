@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2'
 
-const CartList = ({ cart, addToCart, removeFromCart, cartTotal }) => {
+const CartList = ({ cart, addToCart, removeFromCart, cartTotal, formatNumberES, removeProductCart }) => {
     const pay = () => {
         Swal.fire({
             title: 'Exito!',
@@ -13,7 +13,7 @@ const CartList = ({ cart, addToCart, removeFromCart, cartTotal }) => {
         <div className="container mt-5 mb-5">
             <div className="card p-4">
                 <div className="form-check p-0">
-                    <h5>Carrito()</h5>
+                    <h5>Carrito({cart.length})</h5>
                 </div>
                 {
                     cart.map((item) => {
@@ -30,7 +30,7 @@ const CartList = ({ cart, addToCart, removeFromCart, cartTotal }) => {
                                             <div className="card-body p-0 col-lg-5">
                                                 <h5 className="card-title text-lg-start">{item.title}</h5>
                                                 <div className="d-flex justify-content-center justify-content-lg-start mt-4 mt-lg-0">
-                                                    <p className="card-text m-0"><button className="btn text-primary p-0 m-0 border-0" onClick={() => removeFromCart(item)}>Eliminar</button></p>
+                                                    <p className="card-text m-0"><button className="btn text-primary p-0 m-0 border-0" onClick={() => removeProductCart(item)}>Eliminar</button></p>
                                                     <p className="card-text m-0 mx-2"><button className="btn text-primary p-0 m-0 border-0" onClick={() => pay()}>Comprar ahora</button></p>
                                                 </div>
                                             </div>
@@ -39,18 +39,17 @@ const CartList = ({ cart, addToCart, removeFromCart, cartTotal }) => {
                                                 <p className="mx-2 m-0">{item.count}</p>
                                                 <button className="btn btn-success mx-2" onClick={() => addToCart(item)}>+</button>
                                             </div>
-                                            <div className="card-body p-0 mt-4 mt-lg-0 col-lg-4">
-                                                <h4 className="text-center m-0">${(item.price * item.count).toFixed(3)}</h4>
+                                            <div className="card-body p-0 mt-4 mt-lg-0 col-lg-1">
+                                                <h4 className="text-center m-0">${formatNumberES(item.price * item.count)}</h4>
                                             </div>
-                                            <hr />
                                         </div>
                                     </div>
                                 </div>
+                                <hr />
                             </div>
                         )
                     })
                 }
-                <hr />
                 <div className="d-flex justify-content-end">
                     <div className="col-lg-7 row justify-content-end">
                         <div className="col-lg-7 d-flex justify-content-between">
@@ -59,7 +58,7 @@ const CartList = ({ cart, addToCart, removeFromCart, cartTotal }) => {
                         </div>
                         <div className="col-lg-7 d-flex justify-content-between">
                             <h3>Total con envío  </h3>
-                            <h3 className="text-black">${cartTotal().toFixed(3)}</h3>
+                            <h3 className="text-black">${formatNumberES(cartTotal())}</h3>
                         </div>
                     </div>
                 </div>

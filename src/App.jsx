@@ -30,6 +30,14 @@ function App() {
   const [cart, setCart] = useState([])
   const [favorites, setFavorites] = useState([])
 
+  const formatNumberES = (n, d = 0) => {
+    n = new Intl.NumberFormat("es-ES").format(parseFloat(n).toFixed(d))
+    if (d > 0) {
+      const decimals = n.indexOf(",") > -1 ? n.length - 1 - n.indexOf(",") : 0;
+      n = (decimals === 0) ? n + "," + "0".repeat(d) : n + "0".repeat(d - decimals);
+    }
+    return n;
+  }
   const handleFavorites = (item) => {
     const enFavorites = favorites.includes(item)
     if (enFavorites) {
@@ -110,6 +118,15 @@ function App() {
     }
     setCart(updateCart)
   }
+  const removeProductCart = (item) => {
+    const itemIndex = cart.findIndex((product) => product.id === item.id)
+    const updateCart = [...cart]
+    updateCart[itemIndex].count = 0
+    if (updateCart[itemIndex].count <= 0) {
+      updateCart.splice(itemIndex, 1)
+    }
+    setCart(updateCart)
+  }
 
   const cartTotal = () => {
     let total = 0
@@ -120,8 +137,6 @@ function App() {
   const newItemCategories = (newItem) => {
     const sesion = window.localStorage.getItem('usuario')
     const usuario = JSON.parse(sesion)
-console.log(newItem);
-    // newItem.features = ['Rosa', 'Algodón', 'Chile']
     newItem.user_id = usuario.id
     newItem.id = categories.length + 1
     const newObject = [...categories, newItem]
@@ -143,7 +158,7 @@ console.log(newItem);
   }, [])
 
 
-  const globalState = { categories, addToCart, cart, removeFromCart, cartTotal, handleFavorites, handleFavoritesAll, favorites, newItemCategories }
+  const globalState = { categories, addToCart, cart, removeFromCart, cartTotal, handleFavorites, handleFavoritesAll, favorites, newItemCategories, formatNumberES, removeProductCart }
 
   return (
     <div className="App">
