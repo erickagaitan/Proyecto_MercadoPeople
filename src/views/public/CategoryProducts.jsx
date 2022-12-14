@@ -47,7 +47,7 @@ const Products = () => {
 
             <nav className="d-flex justify-content-center my-3">
                 <div className="nav nav-tabs" id="nav-tab" role="tablist">
-                    <button onClick={() => filterCategories('woman')} className="nav-link active" id="nav-mujer-tab" data-bs-toggle="tab" data-bs-target="#nav-mujer" type="button" role="tab" aria-controls="nav-mujer" aria-selected="true"><i className="fa-solid fa-person-dress"></i> Mujer</button>
+                    <button onClick={() => filterCategories('woman')} className="nav-link" id="nav-mujer-tab" data-bs-toggle="tab" data-bs-target="#nav-mujer" type="button" role="tab" aria-controls="nav-mujer" aria-selected="true"><i className="fa-solid fa-person-dress"></i> Mujer</button>
                     <button onClick={() => filterCategories('men')} className="nav-link" id="nav-hombre-tab" data-bs-toggle="tab" data-bs-target="#nav-hombre" type="button" role="tab" aria-controls="nav-hombre" aria-selected="false"><i className="fa-solid fa-person"></i> Hombre</button>
                     <button onClick={() => filterCategories('boy_and_girl')} className="nav-link" id="nav-niño-tab" data-bs-toggle="tab" data-bs-target="#nav-niño" type="button" role="tab" aria-controls="nav-niño" aria-selected="false"><i className="fa-solid fa-child"></i> Niño</button>
                     <button onClick={() => filterCategories('footwear')} className="nav-link" id="nav-calzado-tab" data-bs-toggle="tab" data-bs-target="#nav-calzado" type="button" role="tab" aria-controls="nav-calzado" aria-selected="false"><i className="fa-solid fa-shoe-prints"></i> Calzado</button>
@@ -69,7 +69,7 @@ const Products = () => {
                                     <div className="card-body">
                                         <h5 className="card-title">{item.title}</h5>
                                         <div className="d-flex justify-content-between align-items-center">
-                                            <h4 className="card-text m-0 p-0">{item.price}</h4>
+                                            <h4 className="card-text m-0 p-0">${item.price}</h4>
                                             <div onClick={() => handleFavorites(item)}>
                                                 <Heart filled={favorites.includes(item) ? true : false}></Heart>
                                             </div>
