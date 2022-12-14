@@ -35,26 +35,23 @@ const Navbar = () => {
                     <li className="}nav-item">
                         <span className="nav-link text-white cursor-pointer"></span>
                     </li>
-
-                    <li className="nav-item">
-                        <Link className="nav-link text-white cursor-pointer" to="/vender">
-                            Vender
-                        </Link>
-                    </li>
+                    {usuario?.activo ?
+                        <li className="nav-item">
+                            <Link className="nav-link text-white cursor-pointer" to="/vender">
+                                Vender
+                            </Link>
+                        </li>
+                    :null}
 
                 {/* public */}
-        
-                   <li className="nav-item">
-                        <Link className="nav-link text-white cursor-pointer" to="/Detail">
-                            Detalle
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link text-white cursor-pointer" to="/carro">
-                            <i className="fa-solid fa-cart-shopping"> ${cartTotal() === 0 ? 0 : cartTotal().toFixed(3)}</i>
-                        </Link>
-                    </li>
 
+                    {usuario?.activo &&
+                        <li className="nav-item">
+                            <Link className="nav-link text-white cursor-pointer" to="/carro">
+                                <i className="fa-solid fa-cart-shopping"> ${cartTotal() === 0 ? 0 : cartTotal().toFixed(3)}</i>
+                            </Link>
+                        </li>
+                    }
                     {usuario?.activo ?
                         <li className="nav-item ms-4">
                             <div className="dropdown">
@@ -62,9 +59,6 @@ const Navbar = () => {
                                     {usuario?.email}
                                 </button>
                                 <ul className="dropdown-menu">
-                                    <Link className="nav-link cursor-pointer dropdown-item" to="#">
-                                        Editar mis datos
-                                    </Link>
                                     <Link className="nav-link cursor-pointer dropdown-item" to="/favoritos">
                                         Mis favoritos
                                     </Link>

@@ -7,7 +7,7 @@ import Features from "../../components/Features"
 
 const Products = () => {
     const { categories, addToCart, favorites, handleFavorites } = useContext(Context)
-console.log(categories);
+
     const [productsFilter, setProductsFilter] = useState([])
     const navigate = useNavigate()
 
