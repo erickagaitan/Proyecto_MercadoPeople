@@ -35,19 +35,23 @@ const Navbar = () => {
                     <li className="}nav-item">
                         <span className="nav-link text-white cursor-pointer"></span>
                     </li>
+                    {usuario?.activo ?
+                        <li className="nav-item">
+                            <Link className="nav-link text-white cursor-pointer" to="/vender">
+                                Vender
+                            </Link>
+                        </li>
+                    :null}
 
-                    <li className="nav-item">
-                        <Link className="nav-link text-white cursor-pointer" to="/vender">
-                            Vender
-                        </Link>
-                    </li>
+                {/* public */}
 
-                    <li className="nav-item">
-                        <Link className="nav-link text-white cursor-pointer" to="/carro">
-                            <i className="fa-solid fa-cart-shopping"> ${cartTotal() === 0 ? 0 : cartTotal().toFixed(3)}</i>
-                        </Link>
-                    </li>
-
+                    {usuario?.activo &&
+                        <li className="nav-item">
+                            <Link className="nav-link text-white cursor-pointer" to="/carro">
+                                <i className="fa-solid fa-cart-shopping"> ${cartTotal() === 0 ? 0 : cartTotal().toFixed(3)}</i>
+                            </Link>
+                        </li>
+                    }
                     {usuario?.activo ?
                         <li className="nav-item ms-4">
                             <div className="dropdown">
