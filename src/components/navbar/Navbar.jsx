@@ -16,11 +16,17 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-dark">
             <div className="container-fluid">
-                <div className="">
-                    <img src={Logo} alt="logo" height={50} width={50} />
+                <div className="d-flex align-items-center">
+                    
                     <Link className="navbar-brand text-white cursor-pointer" to="/">
+                    <img src={Logo} alt="logo" height={50} width={50} />
                         <strong className="titulo">Mercado People</strong>
                     </Link>
+                    <li className="nav-item d-flex">
+                        <Link className="nav-link text-white cursor-pointer" to="/products">
+                            Categoria Productos
+                        </Link>
+                    </li>
                 </div>
 
                 <ul className="navbar-nav ">
@@ -36,14 +42,13 @@ const Navbar = () => {
                         </Link>
                     </li>
 
-                    {/* public */}
-                    <li className="nav-item">
-                        <Link className="nav-link text-white cursor-pointer" to="/products">
-                            <strong>Categoria Productos</strong>
+                {/* public */}
+        
+                   <li className="nav-item">
+                        <Link className="nav-link text-white cursor-pointer" to="/Detail">
+                            Detalle
                         </Link>
                     </li>
-
-
                     <li className="nav-item">
                         <Link className="nav-link text-white cursor-pointer" to="/carro">
                             <i className="fa-solid fa-cart-shopping"> ${cartTotal() === 0 ? 0 : cartTotal().toFixed(3)}</i>
