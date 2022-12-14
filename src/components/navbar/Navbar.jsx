@@ -17,9 +17,9 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg bg-dark">
             <div className="container-fluid">
                 <div className="d-flex align-items-center">
-                    
+
                     <Link className="navbar-brand text-white cursor-pointer" to="/">
-                    <img src={Logo} alt="logo" height={50} width={50} />
+                        <img src={Logo} alt="logo" height={50} width={50} />
                         <strong className="titulo">Mercado People</strong>
                     </Link>
                     <li className="nav-item d-flex">
@@ -31,7 +31,7 @@ const Navbar = () => {
 
                 <ul className="navbar-nav ">
 
-                    {/* private */}
+                 
                     <li className="}nav-item">
                         <span className="nav-link text-white cursor-pointer"></span>
                     </li>
@@ -42,13 +42,6 @@ const Navbar = () => {
                         </Link>
                     </li>
 
-                {/* public */}
-        
-                   <li className="nav-item">
-                        <Link className="nav-link text-white cursor-pointer" to="/Detail">
-                            Detalle
-                        </Link>
-                    </li>
                     <li className="nav-item">
                         <Link className="nav-link text-white cursor-pointer" to="/carro">
                             <i className="fa-solid fa-cart-shopping"> ${cartTotal() === 0 ? 0 : cartTotal().toFixed(3)}</i>
@@ -62,9 +55,6 @@ const Navbar = () => {
                                     {usuario?.email}
                                 </button>
                                 <ul className="dropdown-menu">
-                                    <Link className="nav-link cursor-pointer dropdown-item" to="#">
-                                        Editar mis datos
-                                    </Link>
                                     <Link className="nav-link cursor-pointer dropdown-item" to="/favoritos">
                                         Mis favoritos
                                     </Link>
