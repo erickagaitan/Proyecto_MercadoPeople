@@ -9,7 +9,7 @@ const ProductCard = () => {
       <div className="card-body">
 
         <h5 className="card-title">Jeans Wrangler Mom</h5>
-
+        <hr />
         <div className="d-flex justify-content-between">
           <h4 className="card-text">$29.990</h4>
           <i className="fa-regular fa-heart fs-3"></i>
@@ -24,5 +24,5 @@ const ProductCard = () => {
     </div>
   )
 }
-    
+
 export default ProductCard;

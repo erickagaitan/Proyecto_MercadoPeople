@@ -5,13 +5,13 @@ import Context from "../../context/context"
 import Features from "../../components/Features"
 
 const DetailProduct = () => {
-    const { user_id } = useParams()
-    const { categories } = useContext(Context)
+    const { id } = useParams()
+    const { categories, addToCart } = useContext(Context)
 
     const [detail, setDetail] = useState({features: []})
 
     useEffect(()=> {
-        const detail = categories.filter((item)=> item.user_id === user_id)
+        const detail = categories.filter((item)=> parseInt(item.id) === parseInt(id))
         setDetail(detail[0])
     }, [])
 
@@ -21,7 +21,7 @@ const DetailProduct = () => {
                 <div className="card my-5" style={{ maxWidth: "1000px" }}>
                     <div className="row g-2">
                         <div className="col-md-4">
-                            <img src={detail.img} class="img-fluid rounded-start" alt={detail.title} />
+                            <img src={detail.img} className="img-fluid rounded-start" alt={detail.title} />
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
@@ -38,7 +38,7 @@ const DetailProduct = () => {
 
                             <div className="d-flex justify-content-between flex-end mt-3 mx-3">
                                 <h4 className="card-text">{detail.price}</h4>
-                                <button className="btn bg-green text-white mb-2">Añadir</button>
+                                <button className="btn bg-green text-white mb-2" onClick={() => addToCart(detail)}>Añadir</button>
                             </div>
                         </div>
                     </div>
