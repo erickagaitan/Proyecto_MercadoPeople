@@ -1,4 +1,14 @@
+import Swal from 'sweetalert2'
+
 const CartList = ({ cart, addToCart, removeFromCart, cartTotal }) => {
+    const pay = ()=>{
+        Swal.fire({
+            title: 'Exito!',
+            text: 'El pago se ha realizado con exito.',
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+          })
+    }
     return (
         <div className="container mt-5 mb-5">
             <div className="card p-4">
@@ -54,6 +64,9 @@ const CartList = ({ cart, addToCart, removeFromCart, cartTotal }) => {
                     </div>
                 </div>
                 <hr />
+                <div className="d-flex justify-content-end">
+                    <button className="btn btn-primary w-25" onClick={() => pay()}>Pagar</button>
+                </div>
             </div >
         </div>
     )

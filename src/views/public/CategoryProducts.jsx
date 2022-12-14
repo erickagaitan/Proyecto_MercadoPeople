@@ -38,7 +38,7 @@ const Products = () => {
                             return (
                                 <div className="card mx-4 mb-4" style={{ width: '20rem' }} key={item.id}>
                                     <div className="mt-2">
-                                        <img src={item.img} className="card-img-top" alt={item.title} />
+                                        <img src={item.img} className="card-img-top" alt={item.title} style={{height: '280px'}} />
                                     </div>
                                     <div className="card-body">
                                         <h5 className="card-title">{item.title}</h5>

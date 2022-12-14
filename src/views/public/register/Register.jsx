@@ -42,6 +42,7 @@ const Register = () => {
             if(usuario?.email === formData?.email) {
                 alert('ops existe un usuario registrado con el correo:', formData?.email)
             } else {
+                formData.id = Math.floor(Math.random() * 2)
                 window.localStorage.setItem('usuario',JSON.stringify(formData))
                 const sesion = window.localStorage.getItem('usuario')
                 setActualizo(JSON.stringify(sesion))

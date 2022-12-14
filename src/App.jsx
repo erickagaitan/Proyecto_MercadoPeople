@@ -54,38 +54,52 @@ function App() {
   }
 
   const addToCart = (item) => {
-    const Toast = Swal.mixin({
-      toast: true,
-      position: 'bottom-end',
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    })
+    const sesion = window.localStorage.getItem('usuario')
+    const usuario = JSON.parse(sesion)
+    if (usuario.activo) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'bottom-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
 
-    Toast.fire({
-      icon: 'success',
-      title: 'Producto Agregado al Carro de Compras.'
-    })
-    const itemIndex = cart.findIndex((product) => product.id === item.id)
-    const updateCart = [...cart]
+      Toast.fire({
+        icon: 'success',
+        title: 'Producto Agregado al Carro de Compras.'
+      })
+      const itemIndex = cart.findIndex((product) => product.id === item.id)
+      const updateCart = [...cart]
 
-    if (itemIndex === -1) {
-      const product = {
-        id: item.id,
-        count: 1,
-        img: item.img,
-        title: item.title,
-        price: item.price
+      if (itemIndex === -1) {
+        const product = {
+          id: item.id,
+          count: 1,
+          img: item.img,
+          title: item.title,
+          price: item.price
+        }
+        updateCart.push(product)
+      } else {
+        updateCart[itemIndex].count += 1
       }
-      updateCart.push(product)
+      setCart(updateCart)
     } else {
-      updateCart[itemIndex].count += 1
+      Swal.fire({
+        position: 'top-center',
+        icon: 'error',
+        text: 'Debes iniciar sesión para agregar productos.!',
+        title: 'Inicia Sesión',
+        showConfirmButton: false,
+        timer: 3500
+      })
     }
-    setCart(updateCart)
+
   }
   const removeFromCart = (item) => {
     const itemIndex = cart.findIndex((product) => product.id === item.id)
@@ -104,8 +118,11 @@ function App() {
   }
 
   const newItemCategories = (newItem) => {
-    newItem.features = ['a', 'b', 'c']
-    newItem.user_id = 1
+    const sesion = window.localStorage.getItem('usuario')
+    const usuario = JSON.parse(sesion)
+console.log(newItem);
+    // newItem.features = ['Rosa', 'Algodón', 'Chile']
+    newItem.user_id = usuario.id
     newItem.id = categories.length + 1
     const newObject = [...categories, newItem]
     setCategories(newObject)

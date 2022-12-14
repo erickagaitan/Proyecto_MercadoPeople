@@ -17,9 +17,9 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg bg-dark">
             <div className="container-fluid">
                 <div className="d-flex align-items-center">
-                    
+
                     <Link className="navbar-brand text-white cursor-pointer" to="/">
-                    <img src={Logo} alt="logo" height={50} width={50} />
+                        <img src={Logo} alt="logo" height={50} width={50} />
                         <strong className="titulo">Mercado People</strong>
                     </Link>
                     <li className="nav-item d-flex">
@@ -31,7 +31,7 @@ const Navbar = () => {
 
                 <ul className="navbar-nav ">
 
-                    {/* private */}
+                 
                     <li className="}nav-item">
                         <span className="nav-link text-white cursor-pointer"></span>
                     </li>
